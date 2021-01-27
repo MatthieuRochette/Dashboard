@@ -1,0 +1,71 @@
+{
+    "customer": {
+        "host": null
+    },
+    "server": {
+        "current_time": null,
+        "services": [{
+            "name": "Open Weather Map",
+            "widgets ": [{
+                "name": "City Weather",
+                "description ": "Display various weather informations for a specified city",
+                "params ": [{
+                    "city": "string"
+                }]
+            }]
+        }, {
+            "name": "Blagues API",
+            "widgets ": [{
+                "name": "Random joke",
+                "description ": "Choisir une blague au hasard parmis plusieurs catégories disponibles",
+                "params ": [{
+                    "category": "string"
+                }]
+            }]
+        }, {
+            "name": "TheCocktailDB",
+            "widgets ": [{
+                "name": "Search by ingredient",
+                "description ": "Avoir une liste de recettes de cocktails via une recherche par ingrédient",
+                "params ": [{
+                    "ingredient": "string"
+                }]
+            }]
+        }, {
+            "name": "NASA",
+            "widgets ": [{
+                "name": "APOD",
+                "description ": "Astrological Photo Of the Day",
+                "params ": [{
+                    "date": "string (format: YYYY-MM-DD)"
+                }]
+            }, {
+                "name": "Mars rover Curiosity photo",
+                "description ": "Get the latest photo from a given camera of NASA's Mars rover Curiosity",
+                "params ": [{
+                    "camera": "string"
+                }]
+            }]
+        }, {
+            "name": "News API",
+            "widgets ": [{
+                "name": "News search",
+                "description ": "Get trending news on a topic, with an optional search query",
+                "params ": [{
+                    "category": "string",
+                    "query": "string"
+                }]
+            }]
+        }, {
+            "name": "Imgur",
+            "widgets ": [{
+                "name": "Image search",
+                "description ": "Search images (JPGs and GIFs) on Imgur",
+                "params ": [{
+                    "sort": "string",
+                    "q": "string"
+                }]
+            }]
+        }]
+    }
+}

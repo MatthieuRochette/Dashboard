@@ -1,0 +1,61 @@
+version: "3.8"
+
+# ---------------------------------------------- #
+
+services:
+
+  yakaregarder-db:
+    image: postgres:latest
+    env_file: .env
+    expose:
+      - ${POSTGRES_PORT}
+    ports:
+      - "5432:5432"
+    networks:
+      - back
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      - db-data:/var/lib/postgres/data
+    restart: always
+    container_name: "yakaregarder-db"
+
+  yakaregarder-api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: yakaregarder-api:latest
+    env_file: .env
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    networks:
+      - front
+      - back
+    restart: always
+    container_name: "yakaregarder-api"
+
+  server:
+    build:
+      context: ./yakaregarder
+      dockerfile: Dockerfile
+    image: yakaregarder-app:latest
+    env_file: .env
+    ports:
+      - "${APP_PORT}:8080"
+    depends_on:
+      - yakaregarder-db
+    networks:
+      - front
+    restart: always
+    container_name: "yakaregarder-app"
+
+# ---------------------------------------------- #
+
+networks:
+  front:
+  back:
+
+# ---------------------------------------------- #
+
+volumes:
+  db-data:
+    driver: local

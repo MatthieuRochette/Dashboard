@@ -1,0 +1,27 @@
+{
+  "name": "Yakaregarder",
+  "version": "1.0.0",
+  "description": "Epitech 3rd year - Dashboard project",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc -c docs/jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpitechIT2020/B-DEV-500-STG-5-1-cardgames-theo.rohmer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EpitechIT2020/B-DEV-500-STG-5-1-cardgames-theo.rohmer/issues"
+  },
+  "homepage": "https://github.com/EpitechIT2020/B-DEV-500-STG-5-1-cardgames-theo.rohmer#readme",
+  "devDependencies": {
+    "jsdoc": "^3.6.6",
+    "jsdoc-vuejs": "^3.0.9",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {}
+}

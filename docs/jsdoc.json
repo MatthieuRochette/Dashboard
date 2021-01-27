@@ -1,0 +1,20 @@
+{
+  "source": {
+    "include": ["api", "yakaregarder"],
+    "includePattern": "\\.(vue|js)$",
+    "excludePattern": "(node_modules/|docs)"
+  },
+  "plugins": [
+    "plugins/markdown",
+    "node_modules/jsdoc-vuejs"
+  ],
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
+  },
+  "opts": {
+    "recurse": true,
+    "destination": "docs/html/",
+    "readme": "README.md"
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>Yakaregarder</h1>
+<p><em>Epitech 3rd year - Dashboard project</em></p>
+<h2>For deployment</h2>
+<p>Just use the command:</p>
+<pre class="prettyprint source lang-sh"><code>$ docker-compose up --build
+</code></pre>
+<p>to launch the app and press &lt;Ctrl+C&gt; to stop gracefully.</p>
+<p>Navigate to <a href="http://localhost:8080">your localhost on port 8080</a> or your deployment FQDN to see the site.</p>
+<h2>API routes</h2>
+<p>The API has a variety of routes, this is the official documentation about them.</p>
+<p>All API routes begin with the FQDN where you deployed the website.
+If deployed locally, you should use <code>http://localhost</code> instead of an IP address, otherwise some services (i.e. the Google authentication) won't work.</p>
+<p>URL arguments are marked by a <code>:</code> in front of their name.</p>
+<h3>Weather (Open Weather Map)</h3>
+<p>This weather service is based on the Open Weather Map (OWM) API.</p>
+<h4>Weather in a city</h4>
+<pre class="prettyprint source"><code>/api/weather/:city
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>city: the city for which you want weather informations</li>
+</ul>
+<h3>Cocktails</h3>
+<p>This cocktail service is based on the Cocktail DB API.</p>
+<h4>Search for a cocktail</h4>
+<pre class="prettyprint source"><code>/api/cocktail/search/ingredient/:ingredient
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>ingredient: the ingredient you want to use in your cocktail</li>
+</ul>
+<h3>Users</h3>
+<p>The user management of the site. Everything related to user accounts is found here.</p>
+<h4>Sign in</h4>
+<pre class="prettyprint source"><code>/api/users/sign_in
+</code></pre>
+<p>Body: name, email, password (not encrypted/hashed), city</p>
+<h4>Log in</h4>
+<pre class="prettyprint source"><code>/api/users/log_in
+</code></pre>
+<p>Body: email, password (not encrypted/hashed)</p>
+<h4>Get user account data</h4>
+<pre class="prettyprint source"><code>/api/users/get_info/:email
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>email: the email of the user account you want information about</li>
+</ul>
+<h4>Google Authentication</h4>
+<pre class="prettyprint source"><code>/api/users/google_auth
+</code></pre>
+<p>Body: google_id (a.k.a. token_id)</p>
+<h4>Update chosen services</h4>
+<pre class="prettyprint source"><code>/api/users/update_services
+</code></pre>
+<p>Body:</p>
+<ul>
+<li>email: email of the account to update</li>
+<li>services: Array of all the services chosen (their String name)</li>
+</ul>
+<h3>Jokes</h3>
+<p>This jokes service is based on the Blagues API.</p>
+<h4>Get a random joke from a given category</h4>
+<pre class="prettyprint source"><code>/api/jokes/:category
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>category: the catogory of joke (find the list in the Blagues API reference). Special value accepted: <code>random</code>: uses a random category.</li>
+</ul>
+<h3>NASA</h3>
+<p>This NASA service is based on the NASA APIs.</p>
+<h4>APOtD (Astrological Photography Of the Day)</h4>
+<pre class="prettyprint source"><code>/api/nasa/apod/:date
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>date: the photo is assiociated with this date (format: &quot;YYYY-MM-DD&quot;)</li>
+</ul>
+<h4>Mars Rover Image</h4>
+<p>This widget picks one photo among the latest photos taken by the Curiosity Mars Rover.</p>
+<pre class="prettyprint source"><code>/api/nasa/mars/:camera
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>camera: the camera of the Curiosity rover you want a photo from.</li>
+</ul>
+<h3>News</h3>
+<p>This news service is based on the News API.</p>
+<h4>Search by category</h4>
+<pre class="prettyprint source"><code>/api/news/:category/:search
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>category (mandatory): the category of news you want (business, tech...)</li>
+<li>search (optional): a specific search in that category.</li>
+</ul>
+<h3>Imgur</h3>
+<p>This Imgur service is based on the Imgur API.</p>
+<h4>Search images on Imgur</h4>
+<pre class="prettyprint source"><code>/api/imgur/search/:sort/:q
+</code></pre>
+<p>Arguments:</p>
+<ul>
+<li>sort (optional): the sorting method for the search (time | top | viral)</li>
+<li>q (mandatory): the search query</li>
+</ul>
+<h3>About.json</h3>
+<p>Get a JSON file describing the services and widgets of the API</p>
+<pre class="prettyprint source"><code>/api/about.json
+</code></pre></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#_createClient">_createClient</a></li><li><a href="global.html#compareHash">compareHash</a></li><li><a href="global.html#createHash">createHash</a></li><li><a href="global.html#fromCity">fromCity</a></li><li><a href="global.html#getAPOD">getAPOD</a></li><li><a href="global.html#getCuriosityPhoto">getCuriosityPhoto</a></li><li><a href="global.html#getRandom">getRandom</a></li><li><a href="global.html#getRandomCategory">getRandomCategory</a></li><li><a href="global.html#googleAuthManagement">googleAuthManagement</a></li><li><a href="global.html#logInNative">logInNative</a></li><li><a href="global.html#lookupById">lookupById</a></li><li><a href="global.html#newHtmlMail">newHtmlMail</a></li><li><a href="global.html#newTxtMail">newTxtMail</a></li><li><a href="global.html#parse_search_response">parse_search_response</a></li><li><a href="global.html#query">query</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#searchByIngredient">searchByIngredient</a></li><li><a href="global.html#send">send</a></li><li><a href="global.html#signInNative">signInNative</a></li><li><a href="global.html#topNews">topNews</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Nov 29 2020 17:59:34 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
