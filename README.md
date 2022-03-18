@@ -5,7 +5,8 @@
 
 ## For deployment
 
-Just use the command:
+1. Fill the .env file with your Gmail application credentials
+2. Use the below command:
 
 ```sh
 $ docker-compose up --build
