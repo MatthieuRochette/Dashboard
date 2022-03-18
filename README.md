@@ -1,7 +1,9 @@
 # Yakaregarder
 *Epitech 3rd year - Dashboard project*
 
-
+#### Authors
+- Matthieu Rochette
+- Théo Rohmer
 
 ## For deployment
 
