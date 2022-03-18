@@ -2,8 +2,8 @@
 *Epitech 3rd year - Dashboard project*
 
 #### Authors
-- Matthieu Rochette
-- Théo Rohmer
+- [Matthieu Rochette](https://github.com/MatthieuRochette)
+- [Théo Rohmer](https://github.com/Theo67hh)
 
 ## For deployment
 
